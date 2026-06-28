@@ -17,7 +17,7 @@ Below are the primary applications and tools configured and used in this setup:
 
 ---
 
-## 🖼️ Wallpapers
+## Wallpapers
 
 The wallpapers used in this environment are sourced from the custom repository:
 🔗 **[ilyamiro/shell-wallpapers](https://github.com/ilyamiro/shell-wallpapers)**
