@@ -1,4 +1,26 @@
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
+local function load_noctalia_colors()
+    local colors = {
+        mPrimary = "rgb(ffb597)",
+        mSurface = "rgb(181210)",
+        mSecondary = "rgb(e7beae)",
+        mError = "rgb(ffb4ab)",
+        mTertiary = "rgb(d3c78f)",
+    }
+    local path = os.getenv("HOME") .. "/.config/noctalia/colors.json"
+    local file = io.open(path, "r")
+    if file then
+        local content = file:read("*all")
+        file:close()
+        for key, val in content:gmatch('"(%w+)"%s*:%s*"#?(%x+)"') do
+            colors[key] = "rgb(" .. val .. ")"
+        end
+    end
+    return colors
+end
+
+local colors = load_noctalia_colors()
+
 hl.config({
     general = {
         gaps_in  = 2,
@@ -7,8 +29,8 @@ hl.config({
         border_size = 1,
 
         col = {
-            active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
-            inactive_border = "rgba(595959aa)",
+            active_border   = colors.mPrimary,
+            inactive_border = colors.mSurface,
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -18,6 +40,23 @@ hl.config({
         allow_tearing = false,
 
         layout = "dwindle",
+    },
+
+    group = {
+        col = {
+            border_active = colors.mSecondary,
+            border_inactive = colors.mSurface,
+            border_locked_active = colors.mError,
+            border_locked_inactive = colors.mSurface,
+        },
+        groupbar = {
+            col = {
+                active = colors.mSecondary,
+                inactive = colors.mSurface,
+                locked_active = colors.mError,
+                locked_inactive = colors.mSurface,
+            }
+        }
     },
 
     decoration = {
