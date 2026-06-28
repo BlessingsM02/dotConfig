@@ -1,0 +1,73 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "type": "file",
+    "source": "~/.config/fastfetch/noctalia.ascii",
+    "color": {
+      "1": "38;2;{{colors.primary.default.red}};{{colors.primary.default.green}};{{colors.primary.default.blue}}",
+      "2": "38;2;{{colors.tertiary.default.red}};{{colors.tertiary.default.green}};{{colors.tertiary.default.blue}}"
+    },
+    "padding": {
+      "top": 1,
+      "left": 2,
+      "right": 4
+    }
+  },
+  "display": {
+    "separator": "  ➜  ",
+    "color": {
+      "keys": "38;2;{{colors.secondary.default.red}};{{colors.secondary.default.green}};{{colors.secondary.default.blue}}",
+      "title": "38;2;{{colors.primary.default.red}};{{colors.primary.default.green}};{{colors.primary.default.blue}}",
+      "separator": "38;2;{{colors.tertiary.default.red}};{{colors.tertiary.default.green}};{{colors.tertiary.default.blue}}"
+    }
+  },
+  "modules": [
+    "title",
+    {
+      "type": "custom",
+      "format": "{#38;2;{{colors.tertiary.default.red}};{{colors.tertiary.default.green}};{{colors.tertiary.default.blue}}}-----------------------------------------"
+    },
+    {
+      "type": "os",
+      "key": "󰣇 OS"
+    },
+    {
+      "type": "host",
+      "key": "󰘚 Host"
+    },
+    {
+      "type": "kernel",
+      "key": "󰌽 Kernel"
+    },
+    {
+      "type": "uptime",
+      "key": "󱎫 Uptime"
+    },
+    {
+      "type": "shell",
+      "key": "󰞷 Shell"
+    },
+    {
+      "type": "wm",
+      "key": "󱂬 WM"
+    },
+    {
+      "type": "terminal",
+      "key": "󰞀 Terminal"
+    },
+    {
+      "type": "cpu",
+      "key": "󰍛 CPU"
+    },
+    {
+      "type": "memory",
+      "key": "󰘚 Memory"
+    },
+    {
+      "type": "disk",
+      "key": "󰋊 Disk"
+    },
+    "break",
+    "colors"
+  ]
+}

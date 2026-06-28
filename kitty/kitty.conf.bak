@@ -29,12 +29,14 @@ enable_audio_bell no
 # ------------------------
 # Colors
 # ------------------------
-# background #1e1e2e
-# foreground #cdd6f4
-# selection_background #585b70
-# selection_foreground #ffffff
-# cursor #f5e0dc
-# cursor_text_color background
+background #1e1e2e
+foreground #cdd6f4
+
+selection_background #585b70
+selection_foreground #ffffff
+
+cursor #f5e0dc
+cursor_text_color background
 
 # ------------------------
 # Tab bar
@@ -54,8 +56,3 @@ tab_bar_min_tabs 2
 # shell /bin/bash
 # shell /bin/zsh
 # shell /usr/bin/fish
-
-# BEGIN_KITTY_THEME
-# Noctalia
-include current-theme.conf
-# END_KITTY_THEME
